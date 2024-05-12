@@ -1,0 +1,18 @@
+﻿@model MVCStore.Models.Genre
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create new Genre</h2>
+
+@using (Html.BeginForm("CreateNew", "Genre"))
+{
+    /*@Html.LabelFor(m => m.GenreId)
+    @Html.TextBoxFor(m => m.GenreId)
+    <br />*/
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button> 
+}

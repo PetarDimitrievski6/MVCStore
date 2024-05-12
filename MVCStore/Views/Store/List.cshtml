@@ -1,0 +1,15 @@
+﻿@using MVCStore.Models
+@model MVCStore.ViewModels.ArtistAlbumsViewModel
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Albums of @Model.Artist.Name, total: @Model.Albums.Count</h2>
+
+<ul>
+    @foreach(Album a in Model.Albums)
+    {
+        <li>@a.Title</li>
+    }
+</ul>
+

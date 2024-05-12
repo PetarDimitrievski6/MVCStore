@@ -1,0 +1,21 @@
+﻿@model MVCStore.Models.Genre
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Genre</h2>
+
+@using (Html.BeginForm("EditGenre", "Genre"))
+{
+    /*@Html.LabelFor(m => m.GenreId)
+    @Html.TextBoxFor(m => m.GenreId)
+    <br />*/
+    @Html.HiddenFor(m => m.GenreId);
+
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+}
